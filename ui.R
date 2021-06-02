@@ -77,6 +77,32 @@ shinyUI(fluidPage(
       ),
       mainPanel(plotOutput(outputId = "covidplot")
       )
+    ),
+    
+    #sUMMARY TAB
+    tabPanel(
+      'Conclusion',
+      titlePanel("Project Summary"),
+      h3("Notable insight"),
+      p(
+        "The goal of this project is to find out if there is a relationship between covid cases and real estate prices in Seattle,  
+        the result can show a correlation between the two, rather than direct influence because there are too many factors that can 
+        affect real estate prices. From plots in the housing price tab and covid data type the trends seem to have a positive correlation, 
+        higher covid cases correspond to an increase in house price. "
+      ),
+      h3("Notable insight"),
+      p(
+        "After I did further research, I found out that both the spike in covid cases and increase in house pricing might relate to another factor
+        - the restrictions State lifted after more people get vaccined. As the influence of Covid epidemic gradually fade away, the
+         demand of housing market rises while supply is limited which increased housing prices in Seattle. Without the state regulations more
+         people decide to go out instead of staying at home which contributed to the spike in Covid cases."
+      ),
+      h3("Futre ideas and data quality"),
+      p(
+        "The data quality is ok, they are from well maintained websites, the data cleaning process is not really hard. However 
+        there is a flaw that i really want to fix in the future. that is I could only find data of houses sold for the past one year in Seattle, I think this project would be more exciting if i can find more data."
+      )
+      
     )
 ))
 )
