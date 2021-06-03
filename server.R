@@ -10,7 +10,7 @@ shinyServer(
     housedata <- data.table::fread("data/housedata.csv")
     housedata$date = mdy(housedata$date)
     covid_data <- read.csv("data/covid_data.csv")
-    covid_data <- filter(cc, County == 'King County')
+    covid_data <- filter(covid_data, County == 'King County')
     
     output$houseplot <- renderPlot({
       if(input$type == 'Overall'){
