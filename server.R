@@ -56,7 +56,6 @@ shinyServer(
       covid_data$WeekStartDate = mdy(covid_data$WeekStartDate)
       ggplot(data = covid_data) +
         geom_point(mapping = aes(x = WeekStartDate, y = ConfirmedCases), col='orangered1')+
-        geom_smooth(method = "lm", mapping = aes(x = WeekStartDate, y = ConfirmedCases), col='steelblue')+
         labs(
           # title = "Overall prices of houses sold in Seattle for the past year", # plot title
           x = "Date", # x-axis label 
