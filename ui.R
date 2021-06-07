@@ -50,7 +50,8 @@ shinyUI(fluidPage(
       )),
       h3("Team Members"),
       tags$ul(tags$li("Eric Yu"),
-              tags$li("Rinka Tonsho"))
+              tags$li("Rinka Tonsho")),
+      img(src = "covid.png")
     ),
     # second tab
     
@@ -62,7 +63,8 @@ shinyUI(fluidPage(
           'type',
           'Please select if you want to see the graph for mean overall price or mean price per square feet',
           choices = c('Overall', 'price per sqft')
-        )
+        ),
+        textOutput("dec")
       ),
       mainPanel(plotOutput(outputId = "houseplot"),
                 textOutput("msg1"))

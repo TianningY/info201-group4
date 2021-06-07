@@ -5,10 +5,10 @@ account: tianningy
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4220262
-bundleId: 4671754
+bundleId: 4689680
 url: https://tianningy.shinyapps.io/info201-group4-HouseData/
-when: 1622702551.93844
-lastSyncTime: 1622702551.93844
+when: 1623102882.1965
+lastSyncTime: 1623102882.1965
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: datacleaning.R|README.md

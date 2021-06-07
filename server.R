@@ -25,6 +25,9 @@ shinyServer(
         output$msg1 <- renderText({
           paste("The selected subset contains ", nrow(data), "observations")
         })
+        output$dec <- renderText({
+          paste("This graph contains the mean prices for houses sold each day from 2020 to 2021")
+        })
       }
       else if(input$type == 'price per sqft'){
         data <- housedata %>%
@@ -37,6 +40,9 @@ shinyServer(
         
         output$msg1 <- renderText({
           paste("The selected subset contains ", nrow(data), "observations")
+        })
+        output$dec <- renderText({
+          paste("This graph contains the mean per square feet prices for houses sold each day from 2020 to 2021")
         })
       }
       
