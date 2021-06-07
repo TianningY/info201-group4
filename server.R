@@ -9,6 +9,8 @@ shinyServer(
   function(input, output){
     housedata <- data.table::fread("data/housedata.csv")
     housedata$date = mdy(housedata$date)
+    covid_data <- read.csv("data/covid_data.csv")
+    covid_data <- filter(covid_data, County == 'King County')
     
     output$houseplot <- renderPlot({
       if(input$type == 'Overall'){
@@ -51,8 +53,6 @@ shinyServer(
     })
     
     output$covidplot <- renderPlot({
-      covid_data <- read.csv("data/covid_data.csv")
-      covid_data <- filter(cc, County == 'King County')
       covid_data$WeekStartDate = mdy(covid_data$WeekStartDate)
       ggplot(data = covid_data) +
         geom_point(mapping = aes(x = WeekStartDate, y = ConfirmedCases), col='orangered1')+
